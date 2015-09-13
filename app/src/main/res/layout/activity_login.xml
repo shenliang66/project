@@ -1,0 +1,97 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e4d0dbf4"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    tools:context="com.czw.project.activity.LoginActivity">
+
+
+    <LinearLayout
+        android:id="@+id/centre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="User"
+            android:paddingLeft="15dp"/>
+
+        <EditText
+            android:id="@+id/edit_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Password"
+            android:paddingLeft="15dp"
+            android:inputType="textPassword" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/centre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:text="tour to farm"
+        android:textColor="#3f28ff"
+        android:textSize="30sp"
+        android:textStyle="italic" />
+
+    <com.czw.project.util.CircleImageView
+        android:id="@+id/id_image_photo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/text_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/photo" />
+
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/centre"
+        android:layout_marginTop="10dp"
+        android:background="#95b3ca"
+        android:text="LOG IN"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:onClick="login"/>
+
+    <TextView
+        android:id="@+id/text_newUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="New user?"
+        android:textColor="#4d5d69"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:clickable="true"
+        android:onClick="sign"/>
+
+    <TextView
+        android:id="@+id/text_forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_newUser"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Forget your password?"
+        android:textColor="#4d5d69"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:clickable="true"
+        android:onClick="findPassword"/>
+</RelativeLayout>

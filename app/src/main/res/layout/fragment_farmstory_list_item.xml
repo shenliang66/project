@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/image_picture"
+        android:layout_width="900dp"
+        android:layout_height="180dp"
+        fresco:roundedCornerRadius="10dp"
+        />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="【庐山】 记得那一场五彩斑斓的旅游时光"
+        android:paddingTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:textColor="#ffffff"/>
+
+    <ImageView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/picture_upload_location"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/text_title"/>
+
+    <TextView
+        android:id="@+id/text_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/id"
+        android:layout_below="@id/text_title"
+        android:text="河北省保定市涞水县野三坡百里峡风景区"
+        android:textSize="10sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:textColor="#ffffff"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/boss_headPhoto"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        fresco:roundAsCircle="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="10dp"
+        fresco:roundingBorderWidth="1dp"
+        fresco:roundWithOverlayColor="#00ffffff"
+        fresco:roundingBorderColor="#000000"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@drawable/headphoto"/>
+
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000千米"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/boss_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="老王"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/boss_headPhoto"
+        android:layout_marginBottom="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="27人收藏"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tab_firstpage">首页</string>
+    <string name="tab_farmstory">农家故事</string>
+    <string name="tab_tourdiary">游记</string>
+    <string name="tab_user">我的</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="story"> 
+        在狼牙区 在飞虎路 那李杀神 王诛魔 还有刘斩仙断罪小学 再齐心协力 只因为 一个大魔头 奸淫掳掠 他肯定都不敢 但是他爱欺负
+        人 就他一个 大庭广众 敢脱裤子 就他一个 别人撒尿 给提裤子 多可怕 哦你要我问我他的名字 额 额 他的
+        名字叫赵日天</string>
+    <string name="button">按钮</string>
+    <string name="app_name">优农家</string>
+    <string name="title_activity_publish">PublishActivity</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="title_activity_tour_story_more_info">TourStoryMoreInfo</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sign">SignActivity</string>
+    <string name="title_activity_sign_next">SignNextActivity</string>
+    <string name="title_activity_farm_story_more_info">FarmStoryMoreInfo</string>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#fafafa"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="#fff"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/setting_aboutYNJ_back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:background="@drawable/btn_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="关于优农家"
+            android:textColor="#000" />
+    </LinearLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:background="#bbb" />
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="70dp"
+        android:src="@drawable/logo"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="优农家V5.9.2-b292-.121.08301450"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#555"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_marginTop="50dp"
+        android:layout_height="2dp"
+
+        android:background="#0a6bbe" />
+    <RelativeLayout
+        android:id="@+id/setting_btn_about_version"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/my_user_selecter"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/my_name"
+            android:gravity="center_vertical"
+            android:text="用户协议"
+            android:textColor="#000" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/user_icon_right" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:background="#bbb" />
+    <RelativeLayout
+        android:id="@+id/setting_btn_version"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+
+        android:background="@drawable/my_user_selecter"
+        android:clickable="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/my_name"
+            android:gravity="center_vertical"
+            android:text="客服电话"
+            android:textColor="#000" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/user_icon_right" />
+    </RelativeLayout>
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="0.1dp"
+        android:background="#bbb" />
+</LinearLayout>

@@ -1,0 +1,82 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RadioGroup
+        android:id="@+id/tab_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/tab_background"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/tabFristPage"
+            android:layout_width="0dp"
+            android:layout_height="53sp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_tab_firstpage"
+            android:gravity="center_horizontal|top"
+            android:text="@string/tab_firstpage"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tabFarmStory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab_farmstory"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/tab_farmstory"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tabTourDiary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab_tourdiary"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/tab_tourdiary"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/tabUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="#FFF"
+            android:button="@null"
+            android:drawableTop="@drawable/selector_tab_user"
+            android:gravity="center_horizontal|bottom"
+            android:paddingTop="2dp"
+            android:text="@string/tab_user"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+</LinearLayout>

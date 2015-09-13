@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#d4d8db"
+              android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/id_viewPage"
+        android:layout_width="fill_parent"
+        android:layout_height="170dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#000"/>
+
+        <LinearLayout
+            android:id="@+id/dotLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <View
+                android:id="@+id/v_dot0"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/dot_focus"/>
+
+            <View
+                android:id="@+id/v_dot1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_blur"/>
+
+            <View
+                android:id="@+id/v_dot2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_blur"/>
+
+            <View
+                android:id="@+id/v_dot3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_blur"/>
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#ffffff">
+
+        <com.czw.project.util.TextImageButton
+            android:id="@+id/id_hotYouji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_remen"
+            android:layout_weight="1"
+            android:text="热门"/>
+
+        <com.czw.project.util.TextImageButton
+            android:id="@+id/id_writeYouji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon_baike"
+            android:text="百科"/>
+
+        <com.czw.project.util.TextImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon_picwall"
+            android:text="画册"/>
+
+        <com.czw.project.util.TextImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/icon_trip"
+            android:text="攻略"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="10dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_text"/>
+
+        <TextView
+            android:id="@+id/text_auto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="细数农家最美风景  行走的力量 点滴记录真实旅程"
+            android:paddingLeft="50dp"
+            android:paddingRight="40dp"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:gravity="center_vertical"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <View
+            android:id="@+id/id1"
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:background="#458746"
+            android:layout_marginLeft="10dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="最近农家"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/id1"
+            android:layout_marginLeft="5dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:drawableRight="@drawable/more"
+            android:drawablePadding="5dp"
+            android:layout_alignParentRight="true"
+            android:paddingRight="5dp"/>
+    </RelativeLayout>
+</LinearLayout>
+

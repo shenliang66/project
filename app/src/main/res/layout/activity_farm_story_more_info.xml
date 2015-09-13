@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.czw.project.activity.FarmStoryMoreInfo">
+
+
+    <RelativeLayout
+        android:id="@+id/id_viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:flipInterval="5000"
+            android:autoStart="true">
+
+            <com.czw.project.util.WebImageView
+                android:id="@+id/image1"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_image" />
+
+            <com.czw.project.util.WebImageView
+                android:id="@+id/image2"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_image" />
+
+            <com.czw.project.util.WebImageView
+                android:id="@+id/image3"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_image" />
+
+            <com.czw.project.util.WebImageView
+                android:id="@+id/image4"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/no_image" />
+
+        </ViewFlipper>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/viewFlipper"
+            android:layout_margin="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:id="@+id/dot_1"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_focus" />
+
+            <View
+                android:id="@+id/dot_2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_blur" />
+
+            <View
+                android:id="@+id/dot_3"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_blur" />
+
+            <View
+                android:id="@+id/dot_4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/dot_blur" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/as4" />
+
+        <ImageButton
+            android:id="@+id/btn_star"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/like" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ddbfbfdc"
+        android:layout_below="@id/id_viewFlipper">
+        <RelativeLayout
+            android:id="@+id/jianjie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="5dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="野三坡百里峡绿峡"
+                android:textSize="16sp"/>
+
+            <ImageView
+                android:id="@+id/id"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/local"
+                android:layout_below="@id/text_name"
+                android:layout_marginLeft="-5dp"/>
+
+            <TextView
+                android:id="@+id/text_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_name"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/id"
+                android:text="河北省保定市涞水县野三坡百里峡风景区"
+                android:gravity="bottom"/>
+
+
+            <Button
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="分享"
+                android:background="#ffffff"
+                android:drawableTop="@android:drawable/ic_menu_share"/>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="55dp"
+                android:layout_toLeftOf="@id/btn_share"
+                android:background="#b2627258"/>
+
+            <com.czw.project.util.CircleImageView
+                android:id="@+id/image_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_below="@id/text_address"
+                android:src="@drawable/headphoto"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/tell"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="电 话："
+                android:layout_alignBottom="@id/image_photo"
+                android:layout_toRightOf="@id/image_photo"
+                android:layout_marginBottom="10dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:id="@+id/text_zhanggui"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="掌柜的："
+                android:layout_above="@id/tell"
+                android:layout_toRightOf="@id/image_photo"
+                android:layout_marginBottom="15dp"
+                android:gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大龙"
+                android:layout_toRightOf="@id/text_zhanggui"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBaseline="@id/text_zhanggui"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11012011012"
+                android:layout_toRightOf="@id/tell"
+                android:layout_marginLeft="10dp"
+                android:layout_alignBaseline="@id/tell"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="农家印象（游客评价）"
+                android:textSize="15sp"
+                android:layout_weight="1"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/user_icon_right" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:orientation="horizontal"
+            android:background="#ffffff"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择 日期 服务内容"
+                android:textSize="15sp"
+                android:layout_weight="1"/>
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/user_icon_right" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#ffffff"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="骚扰掌柜"
+            android:background="#2fff62"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="加入收藏"
+            android:background="#4fffff"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#99fff8"
+            android:text="立即购买"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

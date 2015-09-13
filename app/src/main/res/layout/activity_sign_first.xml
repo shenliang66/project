@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.czw.project.activity.SignActivityFirst">
+    
+    <RelativeLayout
+        android:id="@+id/id_actionBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#dc2f2927">
+        
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/as4"
+            android:layout_marginLeft="5dp"/>
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:layout_centerInParent="true"
+            android:text="新用户注册"
+            android:textSize="22sp"
+            android:textColor="#ffffff"
+            android:textStyle="italic"/>
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#e4dbf4b9"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="50dp">
+
+        <EditText
+            android:id="@+id/edit_mobilePhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"
+            android:paddingLeft="15dp"
+            android:inputType="number"/>
+
+        <LinearLayout
+            android:id="@+id/yanzhengma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/edit_mobilePhoneNumber">
+
+            <EditText
+                android:id="@+id/edit_yanzhengma"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_marginRight="15dp"
+                android:hint="验证码"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="获取验证码"
+                android:onClick="verification"
+                android:layout_weight="1"
+                android:background="#e4a6fca6"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/yanzhengma"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="下一步"
+            android:background="#e8a6b98c"
+            android:onClick="next"/>
+        
+    </RelativeLayout>
+
+</LinearLayout>

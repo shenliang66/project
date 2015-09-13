@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#b7babd"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="5dp">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/image_photo"
+            fresco:placeholderImage="@mipmap/ic_launcher"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            fresco:roundedCornerRadius="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/image_photo"
+            android:text="用户"/>
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/image_photo"
+            android:layout_below="@id/text_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="6小时前"
+            android:textSize="12sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/text_time"
+            android:text="来自iphone2"
+            android:layout_alignBottom="@id/text_time"
+            android:layout_marginLeft="10dp"
+            android:textSize="10sp"/>
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="35dp"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:background="@drawable/read_count_shape"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="89"
+                android:textSize="9sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="阅读"
+                android:textSize="12sp"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/image_photo"
+            android:text="标题"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_title"
+            android:layout_marginTop="10dp"
+            android:maxLines="4"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:text="~~~~~~~刘硕前来受死。1234564555555555555555555555555555555555555sssssss"
+             />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_content"
+            android:orientation="horizontal" >
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_picture1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:roundedCornerRadius="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                />
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_picture2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:roundedCornerRadius="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"/>
+
+            <com.facebook.drawee.view.SimpleDraweeView
+                android:id="@+id/image_picture3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                fresco:roundedCornerRadius="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="1dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ccffffff"
+                android:textColor="#000"
+                android:textSize="10sp"
+                android:text="21"
+                android:drawableLeft="@drawable/icon_share"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:text="1"
+            android:background="#cfcfcf"
+            android:layout_gravity="center"/>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/id_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ccffffff"
+                android:textSize="10sp"
+                android:textColor="#05a"
+                android:text="32"
+                android:drawableLeft="@drawable/icon_comment"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="20dp"
+            android:text="1"
+            android:background="#cfcfcf"
+            android:layout_gravity="center"/>
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#ccffffff"
+                android:textColor="#e00"
+                android:textSize="10sp"
+                android:text="1200"
+                android:drawableLeft="@drawable/icon_like"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+</LinearLayout>

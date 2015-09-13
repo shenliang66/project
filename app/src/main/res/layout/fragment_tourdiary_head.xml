@@ -1,0 +1,180 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#d4d8db"
+                tools:context=".MainActivity">
+
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:autoStart="true"
+        android:flipInterval="3000"
+        android:inAnimation="@anim/right_in"
+        android:outAnimation="@anim/left_out">
+
+        <ImageView
+            android:id="@+id/image1"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/appmain"/>
+
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/appnew"/>
+
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/appnext"/>
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/afternoon"/>
+
+    </ViewFlipper>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/viewFlipper"
+        android:layout_margin="8dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/dot_1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/dot_blur"/>
+
+        <View
+            android:id="@+id/dot_2"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/dot_blur"/>
+
+        <View
+            android:id="@+id/dot_3"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/dot_blur"/>
+
+        <View
+            android:id="@+id/dot_4"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/dot_blur"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/write"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/viewFlipper"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:text="记录旅行足迹 ..."/>
+
+        <ImageButton
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:background="#c6c9cc"
+            android:src="@drawable/v1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/write"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="7dp"
+            android:background="#458746"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="看看别人的旅途"/>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/id_radio_group"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/id"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/btn_1"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_line"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="随便看看"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/btn_2"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_line"
+            android:button="@null"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="热门游记"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp"/>
+
+        <RadioButton
+            android:id="@+id/btn_3"
+            android:layout_width="0dp"
+            android:layout_height="40sp"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:background="@drawable/selecter_line"
+            android:button="@null"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="最新游记"
+            android:textColor="@drawable/selector_tab_textcolor"
+            android:textSize="12sp"/>
+    </RadioGroup>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="btn_normal" >#dd3f22</color>
+    <color name="btn_pressed" >#dd5c11</color>
+</resources>
