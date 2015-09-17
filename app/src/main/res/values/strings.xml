@@ -19,4 +19,5 @@
     <string name="title_activity_sign">SignActivity</string>
     <string name="title_activity_sign_next">SignNextActivity</string>
     <string name="title_activity_farm_story_more_info">FarmStoryMoreInfo</string>
+    <string name="title_activity_position">PositionActivity</string>
 </resources>

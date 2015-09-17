@@ -13,7 +13,7 @@
         android:id="@+id/id_image_photo"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/photo" />
+        android:src="@drawable/headphoto" />
 
     <TextView
         android:id="@+id/id_text_name"

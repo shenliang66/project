@@ -90,10 +90,12 @@ public class TabFragmentFarmStory extends Fragment {
         list_farmStory.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
-        image1.setImageURI(Uri.parse(farmStories.get(0).getPicture1().getFileUrl(getContext())));
-        image2.setImageURI(Uri.parse(farmStories.get(1).getPicture1().getFileUrl(getContext())));
-        image3.setImageURI(Uri.parse(farmStories.get(2).getPicture1().getFileUrl(getContext())));
-        image4.setImageURI(Uri.parse(farmStories.get(3).getPicture1().getFileUrl(getContext())));
+        if(farmStories.size() >= 4){
+            image1.setImageURI(Uri.parse(farmStories.get(0).getPicture1().getFileUrl(getContext())));
+            image2.setImageURI(Uri.parse(farmStories.get(1).getPicture1().getFileUrl(getContext())));
+            image3.setImageURI(Uri.parse(farmStories.get(2).getPicture1().getFileUrl(getContext())));
+            image4.setImageURI(Uri.parse(farmStories.get(3).getPicture1().getFileUrl(getContext())));
+        }
     }
 
     private void initView() {

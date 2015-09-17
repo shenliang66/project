@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#e7ebee"
+              android:orientation="vertical"
+              tools:context="com.czw.project.activity.PositionActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff"
+        android:gravity="center_vertical">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/a1t"
+            android:onClick="close"/>
+
+        <TextView
+            android:id="@+id/selectCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="选择城市"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="当前定位城市"
+        android:textSize="11sp"/>
+
+    <TextView
+        android:id="@+id/currentCity"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        android:text="邯郸"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:text="选择其他城市"
+        android:textSize="12sp"
+        android:gravity="center_vertical"/>
+
+    <ListView
+        android:id="@+id/id_listCity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="#ffffff"/>
+</LinearLayout>

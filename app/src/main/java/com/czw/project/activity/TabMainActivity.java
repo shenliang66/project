@@ -1,5 +1,6 @@
 package com.czw.project.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -11,8 +12,14 @@ import android.view.View;
 import android.view.Window;
 import android.widget.RadioGroup;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.baidu.location.BDLocation;
+import com.baidu.location.BDLocationListener;
+import com.baidu.location.LocationClient;
+import com.baidu.location.LocationClientOption;
+import com.baidu.mapapi.SDKInitializer;
 import com.czw.project.R;
 import com.czw.project.fragment.TabFragmentFarmStory;
 import com.czw.project.fragment.TabFragmentFirstPage;
@@ -50,13 +57,23 @@ public class TabMainActivity extends FragmentActivity implements Runnable {
 
     private RelativeLayout mActionBar;
 
+    public LocationClient mLocationClient = null;
+    public BDLocationListener myListener = new MyLocationListener();
+
+    private TextView mLocation;
+    private BDLocation mBDLocation;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.application_load);
+        SDKInitializer.initialize(getApplicationContext());
         Bmob.initialize(this, "c41cec5bf04044a1da77ffa4756cf646");
         Fresco.initialize(this);
+        mLocationClient = new LocationClient(getApplicationContext());     //声明LocationClient类
+        mLocationClient.registerLocationListener(myListener);
 
         new Thread(this).start();
     }
@@ -66,15 +83,29 @@ public class TabMainActivity extends FragmentActivity implements Runnable {
         @Override
         public void handleMessage(Message msg) {
             i++;
-            if(i == 2){
+            if (i == 2) {
                 setContentView(R.layout.tab_main);
                 initView();
+                initLocation();
+                mLocationClient.start();
             }
         }
     };
 
+    private void initLocation() {
+        LocationClientOption option = new LocationClientOption();
+        option.setLocationMode(LocationClientOption.LocationMode.Battery_Saving
+        );//可选，默认高精度，设置定位模式，高精度，低功耗，仅设备
+        option.setCoorType("bd09ll");//可选，默认gcj02，设置返回的定位结果坐标系
+        int span = 1;
+        option.setScanSpan(span);//可选，默认0，即仅定位一次，设置发起定位请求的间隔需要大于等于1000ms才是有效的
+        option.setIsNeedAddress(true);//可选，设置是否需要地址信息，默认不需要
+        mLocationClient.setLocOption(option);
+    }
+
     private void initView() {
         mActionBar = (RelativeLayout) findViewById(R.id.action_bar);
+        mLocation = (TextView) findViewById(R.id.local_name);
         TabFragmentFirstPage firstPage = new TabFragmentFirstPage();
         TabFragmentFarmStory farmStory = new TabFragmentFarmStory();
         TabFragmentTourDiary tourDiary = new TabFragmentTourDiary();
@@ -202,11 +233,38 @@ public class TabMainActivity extends FragmentActivity implements Runnable {
         });
     }
 
-    public void hideActionbar(boolean isHide){
-        if(isHide){
+    /* 隐藏actionbar */
+    public void hideActionbar(boolean isHide) {
+        if (isHide) {
             mActionBar.setVisibility(View.GONE);
-        }else {
+        } else {
             mActionBar.setVisibility(View.VISIBLE);
+        }
+    }
+
+    /*显示当前位置*/
+    public void showPosition(View view) {
+        Intent toPositionAvtivity = new Intent(TabMainActivity.this, PositionActivity.class);
+        toPositionAvtivity.putExtra("city",mLocation.getText().toString());
+        startActivityForResult(toPositionAvtivity, 0);
+        overridePendingTransition(R.anim.up_in,R.anim.no);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 0 && resultCode == 0) {
+            mLocation.setText(data.getStringExtra("city"));
+        }
+    }
+
+    class MyLocationListener implements BDLocationListener {
+        @Override
+        public void onReceiveLocation(BDLocation location) {
+            mBDLocation = location;
+            if (location.getAddrStr() != null) {
+                mLocation.setText(location.getAddrStr().substring(5, 7));
+            }
         }
     }
 }

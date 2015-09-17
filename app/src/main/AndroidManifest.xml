@@ -17,15 +17,22 @@
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="ANDROID.PERMISSION.GET_TASKS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE"/>
+
+
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote">
+        </service>
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="rKS8Dw31SEKsTWQSPINNSpIY" />
+            android:value="g2Dj3A0ZTzpZm94iUZggpuyR" />
 
         <activity android:name=".activity.TabMainActivity" >
             <intent-filter>
@@ -36,16 +43,6 @@
         </activity>
         <activity android:name=".activity.SearcFarm" >
         </activity>
-
-        <service
-            android:name="com.baidu.location.f"
-            android:enabled="true"
-            android:process=":remote" >
-            <intent-filter>
-                <action android:name="com.baidu.location.service_v2.2" >
-                </action>
-            </intent-filter>
-        </service>
 
         <activity
             android:name=".activity.LocateCity"
@@ -81,6 +78,10 @@
         <activity
             android:name=".activity.FarmStoryMoreInfo"
             android:label="@string/title_activity_farm_story_more_info" >
+        </activity>
+        <activity
+            android:name=".activity.PositionActivity"
+            android:label="@string/title_activity_position">
         </activity>
     </application>
 

@@ -23,10 +23,12 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:23.+'
-    compile files('libs/BaiduLBS_Android.jar')
     compile files('libs/BmobSDK_V3.4.3_0820.jar')
     compile files('libs/Bmob_Push_V0.6beta_20150408.jar')
     compile files('libs/okhttp-2.4.0.jar')
     compile files('libs/okio-1.4.0.jar')
     compile 'com.facebook.fresco:fresco:0.5.0+'
+    compile files('libs/BaiduLBS_Android.jar')
 }
+
+

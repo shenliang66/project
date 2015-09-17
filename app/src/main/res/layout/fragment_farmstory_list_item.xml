@@ -45,21 +45,6 @@
         android:textColor="#ffffff"
         />
 
-    <com.facebook.drawee.view.SimpleDraweeView
-        android:id="@+id/boss_headPhoto"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        fresco:roundAsCircle="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="5dp"
-        android:layout_marginBottom="10dp"
-        fresco:roundingBorderWidth="1dp"
-        fresco:roundWithOverlayColor="#00ffffff"
-        fresco:roundingBorderColor="#000000"
-        fresco:actualImageScaleType="focusCrop"
-        fresco:placeholderImage="@drawable/headphoto"/>
-
-
     <TextView
         android:id="@+id/distance"
         android:layout_width="wrap_content"
@@ -69,17 +54,6 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"/>
-
-    <TextView
-        android:id="@+id/boss_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="老王"
-        android:textColor="#ffffff"
-        android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/boss_headPhoto"
-        android:layout_marginBottom="10dp"/>
-
 
     <TextView
         android:layout_width="wrap_content"

@@ -6,40 +6,44 @@
 
     <RelativeLayout
         android:id="@+id/action_bar"
-                    android:layout_width="match_parent"
-                    android:layout_height="45dp"
-                    android:background="#cfcfcf"
-                    android:gravity="center_vertical">
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#cfcfcf"
+        android:gravity="center_vertical">
+
         <TextView
             android:id="@+id/local_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
             android:layout_centerVertical="true"
-            android:text="邯郸"
-            />
+            android:layout_marginLeft="5dp"
+            android:clickable="true"
+            android:onClick="showPosition"
+            android:text="邯郸"/>
 
-        <ImageView
+        <ImageButton
             android:id="@+id/more"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/local_name"
-            android:src="@android:drawable/arrow_down_float"
-            android:layout_marginLeft="5dp"
+            android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
-            android:layout_alignParentBottom="true"/>
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/local_name"
+            android:background="@android:drawable/arrow_down_float"
+            android:onClick="showPosition"/>
 
         <EditText
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/more"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/icon_search"
+            android:layout_centerInParent="true"
             android:layout_centerVertical="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginRight="60dp"
-            android:hint="搜索农家"
-            android:gravity="center"/>
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/more"
+            android:background="@drawable/icon_search"
+            android:gravity="center"
+            android:hint="搜索农家"/>
 
         <ImageButton
             android:layout_width="40dp"
