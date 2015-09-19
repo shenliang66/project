@@ -49,7 +49,5 @@ public class MyInfo extends Activity {
 
 	public void exit(View view){
 		BmobUser.logOut(this);
-		Intent toLoginActivity = new Intent(this,LoginActivity.class);
-		startActivity(toLoginActivity);
 	}
 }

@@ -1,5 +1,6 @@
 package com.czw.project.activity;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -127,6 +128,8 @@ public class TabMainActivity extends FragmentActivity implements Runnable {
             public Fragment getItem(int position) {
                 return fragments.get(position);
             }
+
+
         };
         mViewPager.setAdapter(pagerAdapter);
         mViewPager.setOffscreenPageLimit(4);
@@ -241,7 +244,6 @@ public class TabMainActivity extends FragmentActivity implements Runnable {
             mActionBar.setVisibility(View.VISIBLE);
         }
     }
-
     /*显示当前位置*/
     public void showPosition(View view) {
         Intent toPositionAvtivity = new Intent(TabMainActivity.this, PositionActivity.class);

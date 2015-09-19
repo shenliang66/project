@@ -1,97 +1,120 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#e4d0dbf4"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    tools:context="com.czw.project.activity.LoginActivity">
-
-
-    <LinearLayout
-        android:id="@+id/centre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:orientation="vertical">
-
-        <EditText
-            android:id="@+id/edit_userName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="User"
-            android:paddingLeft="15dp"/>
-
-        <EditText
-            android:id="@+id/edit_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:hint="Password"
-            android:paddingLeft="15dp"
-            android:inputType="textPassword" />
-
-    </LinearLayout>
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.czw.project.activity.LoginActivity">
 
     <TextView
-        android:id="@+id/text_name"
-        android:layout_width="wrap_content"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="登陆或注册"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/holo_blue_dark"/>
+
+    <EditText
+        android:id="@+id/phoneNum"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/centre"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="40dp"
-        android:text="tour to farm"
-        android:textColor="#3f28ff"
-        android:textSize="30sp"
-        android:textStyle="italic" />
+        android:hint="手机号"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/line"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:inputType="number"/>
 
-    <com.czw.project.util.CircleImageView
-        android:id="@+id/id_image_photo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_above="@id/text_name"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="10dp"
-        android:src="@drawable/headphoto" />
+    <LinearLayout
+        android:id="@+id/edit_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phoneNum"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:orientation="horizontal">
 
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="密码(不少于六位)"
+            android:visibility="gone"
+            android:layout_weight="1"
+            android:inputType="textPassword"/>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00ffffff"
+                android:visibility="gone"
+                android:text="60"
+                android:layout_gravity="center"/>
+            <ProgressBar
+                android:id="@+id/time_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+        </FrameLayout>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="昵称"
+        android:layout_below="@id/edit_password"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:visibility="gone"/>
 
     <Button
         android:id="@+id/btn_login"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/centre"
+        android:text="登陆"
+        android:layout_below="@id/user_name"
         android:layout_marginTop="10dp"
-        android:background="#95b3ca"
-        android:text="LOG IN"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:onClick="login"/>
+        android:layout_alignEnd="@id/phoneNum"
+        android:background="#06ffffff"
+        android:textSize="15sp"
+        android:enabled="false"/>
 
-    <TextView
-        android:id="@+id/text_newUser"
+    <Button
+        android:id="@+id/btn_sign"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_login"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="New user?"
-        android:textColor="#4d5d69"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:clickable="true"
-        android:onClick="sign"/>
+        android:text="注册"
+        android:layout_below="@id/user_name"
+        android:layout_marginTop="10dp"
+        android:background="#06ffffff"
+        android:textSize="15sp"
+        android:layout_alignStart="@id/phoneNum"/>
 
-    <TextView
-        android:id="@+id/text_forgetPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text_newUser"
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Forget your password?"
-        android:textColor="#4d5d69"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:clickable="true"
-        android:onClick="findPassword"/>
+        android:layout_above="@id/btn_sign"/>
+
 </RelativeLayout>

@@ -45,10 +45,6 @@
         </activity>
 
         <activity
-            android:name=".activity.LocateCity"
-            android:theme="@android:style/Theme.Light.NoTitleBar" >
-        </activity>
-        <activity
             android:name=".activity.MyInfo"
             android:theme="@android:style/Theme.NoTitleBar" />
         <activity
@@ -64,16 +60,8 @@
         </activity>
         <activity
             android:name=".activity.LoginActivity"
-            android:label="@string/title_activity_login" >
-        </activity>
-        <activity
-            android:name=".activity.SignActivityFirst"
-            android:label="@string/title_activity_sign"
-            android:parentActivityName=".activity.LoginActivity" >
-        </activity>
-        <activity
-            android:name=".activity.SignNextActivity"
-            android:label="@string/title_activity_sign_next" >
+            android:label="@string/title_activity_login"
+            android:theme="@style/Theme.AppCompat.Light.Dialog">
         </activity>
         <activity
             android:name=".activity.FarmStoryMoreInfo"

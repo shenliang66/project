@@ -1,73 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:background="#d4d8db"
-              android:orientation="vertical">
-
-    <FrameLayout
-        android:id="@+id/id_viewPage"
-        android:layout_width="fill_parent"
-        android:layout_height="170dp">
+              android:background="#d4d8db">
 
         <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="#000"/>
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:autoStart="true"
+            android:flipInterval="3000"
+            android:inAnimation="@anim/right_in"
+            android:outAnimation="@anim/left_out"
+            android:descendantFocusability="blocksDescendants"
+            />
 
         <LinearLayout
-            android:id="@+id/dotLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:gravity="center"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:layout_alignBottom="@id/viewFlipper"
+            android:layout_margin="8dp"
+            android:gravity="right"
+            android:orientation="horizontal">
 
             <View
-                android:id="@+id/v_dot0"
+                android:id="@+id/dot_1"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
-                android:background="@drawable/dot_focus"/>
-
-            <View
-                android:id="@+id/v_dot1"
-                android:layout_width="8dp"
-                android:layout_height="8dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:background="@drawable/dot_blur"/>
 
             <View
-                android:id="@+id/v_dot2"
+                android:id="@+id/dot_2"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:background="@drawable/dot_blur"/>
 
             <View
-                android:id="@+id/v_dot3"
+                android:id="@+id/dot_3"
                 android:layout_width="8dp"
                 android:layout_height="8dp"
-                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/dot_blur"/>
+
+            <View
+                android:id="@+id/dot_4"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginRight="5dp"
                 android:background="@drawable/dot_blur"/>
         </LinearLayout>
-    </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/button"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:background="#ffffff"
         android:orientation="horizontal"
-        android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:background="#ffffff">
+        android:paddingTop="10dp"
+        android:layout_below="@id/viewFlipper">
 
         <com.czw.project.util.TextImageButton
             android:id="@+id/id_hotYouji"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/icon_remen"
             android:layout_weight="1"
+            android:src="@drawable/icon_remen"
             android:text="热门"/>
 
         <com.czw.project.util.TextImageButton
@@ -86,6 +86,7 @@
             android:text="画册"/>
 
         <com.czw.project.util.TextImageButton
+            android:id="@+id/btn_gonglue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -93,14 +94,17 @@
             android:text="攻略"/>
 
     </LinearLayout>
+
     <LinearLayout
+        android:id="@+id/text"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="#ffffff"
+        android:layout_marginBottom="10dp"
         android:layout_marginTop="5dp"
+        android:background="#ffffff"
         android:gravity="center_vertical"
-        android:layout_marginBottom="10dp">
+        android:orientation="horizontal"
+        android:layout_below="@id/button">
 
         <ImageView
             android:layout_width="wrap_content"
@@ -112,45 +116,46 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="细数农家最美风景  行走的力量 点滴记录真实旅程"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical"
+            android:marqueeRepeatLimit="marquee_forever"
             android:paddingLeft="50dp"
             android:paddingRight="40dp"
-            android:singleLine="true"
             android:scrollHorizontally="true"
-            android:ellipsize="marquee"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:gravity="center_vertical"/>
+            android:singleLine="true"
+            android:text="细数农家最美风景  行走的力量 点滴记录真实旅程"/>
     </LinearLayout>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="30dp"
         android:background="#ffffff"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:layout_below="@id/text">
 
         <View
             android:id="@+id/id1"
             android:layout_width="2dp"
             android:layout_height="20dp"
-            android:background="#458746"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:background="#458746"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="最近农家"
-            android:textSize="16sp"
+            android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/id1"
-            android:layout_marginLeft="5dp"/>
+            android:text="最近农家"
+            android:textSize="16sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="更多"
-            android:drawableRight="@drawable/more"
-            android:drawablePadding="5dp"
             android:layout_alignParentRight="true"
-            android:paddingRight="5dp"/>
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/more"
+            android:paddingRight="5dp"
+            android:text="更多"/>
     </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>
 
